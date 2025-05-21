@@ -43,10 +43,9 @@ public class AddContactActivity extends AppCompatActivity {
         phoneEdit = findViewById(R.id.editPhone);
         photoView = findViewById(R.id.photoView);
         takePhotoBtn = findViewById(R.id.btnTakePhoto);
-        selectPhotoBtn = findViewById(R.id.btnSelectPhoto);  // Добавь кнопку в разметку!
+        selectPhotoBtn = findViewById(R.id.btnSelectPhoto);
         addBtn = findViewById(R.id.btnAddContact);
 
-        // Запуск камеры
         cameraLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
@@ -57,7 +56,6 @@ public class AddContactActivity extends AppCompatActivity {
                     }
                 });
 
-        // Выбор из галереи
         galleryLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 result -> {
